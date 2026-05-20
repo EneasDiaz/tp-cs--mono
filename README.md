@@ -3,8 +3,6 @@
 ## Integrantes
 
 - Eneas
-- Agregar integrante 2
-- Agregar integrante 3
 
 ## Objetivo del trabajo
 
@@ -25,3 +23,22 @@ Para instalar Mono en Ubuntu se utilizaron los siguientes comandos:
 ```bash
 sudo apt update
 sudo apt install mono-complete
+```
+
+## Capturas del proceso
+
+### Verificación de Mono y xbuild
+
+![Versión de Mono y xbuild](/capturas/version-mono-xbuild.jpeg)
+
+### Compilación exitosa
+
+![Compilación exitosa](capturas/compilacion-exitosa.jpeg)
+
+### Ejecución del programa
+
+![Ejecución del programa](capturas/ejecucion-ventana.jpeg)
+
+### Programa dibujando figuras
+
+![Programa dibujando figuras](capturas/programa-dibujando.jpeg)
