@@ -1,0 +1,16 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio / Mono
+.vs/
+*.user
+*.suo
+*.cache
+*.pidb
+*.pdb
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
