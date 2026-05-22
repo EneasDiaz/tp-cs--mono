@@ -15,11 +15,14 @@ namespace Figuras
         public Form1()
         {
             InitializeComponent();
+
+            int tamanoBase = 40;
+
             figuras = new Figura[3] 
             {
-                new Circulo(40) { ColorTrazo = ColorAleatorio() },
-                new Rectangulo(80,55) { ColorTrazo = ColorAleatorio() },
-                new Cuadrado(100) { ColorTrazo = ColorAleatorio() },
+                new Circulo(tamanoBase * 1) { ColorTrazo = ColorAleatorio() },
+                new Rectangulo(tamanoBase * 3 / 2, tamanoBase * 2) { ColorTrazo = ColorAleatorio() },
+                new Cuadrado(tamanoBase * 3) { ColorTrazo = ColorAleatorio() },
             };
 
         }
