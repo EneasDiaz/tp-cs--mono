@@ -96,4 +96,13 @@ namespace Figuras
             graphics.DrawPolygon(pen, points);
         }
     }
+
+    public class TrianguloEquilatero : TrianguloIsosceles
+    {
+        // La altura de un triángulo equilátero es la base * (raiz de 3) / 2
+        public TrianguloEquilatero(int lado) 
+            : base(lado, (int)(lado * Math.Sqrt(3) / 2))
+        {
+        }
+    }
 }

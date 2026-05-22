@@ -16,14 +16,15 @@ namespace Figuras
         {
             InitializeComponent();
 
-            int tamanoBase = 25;
+            int tamanoBase = 20;
 
-            figuras = new Figura[4] 
+            figuras = new Figura[5] 
             {
                 new Circulo(tamanoBase * 1) { ColorTrazo = ColorAleatorio() },
                 new Rectangulo(tamanoBase * 3 / 2, tamanoBase * 2) { ColorTrazo = ColorAleatorio() },
                 new Cuadrado(tamanoBase * 3) { ColorTrazo = ColorAleatorio() },
-                new TrianguloIsosceles(tamanoBase * 4 , tamanoBase *4 ){ ColorTrazo = ColorAleatorio() },
+                new TrianguloIsosceles(tamanoBase * 3 , tamanoBase * 4 ){ ColorTrazo = ColorAleatorio() },
+                new TrianguloEquilatero(tamanoBase * 5) { ColorTrazo = ColorAleatorio() },
             };
 
         }
@@ -44,9 +45,8 @@ namespace Figuras
             for (int i = 0; i < figuras.Length; i++)
             {
                 Pen pen = new Pen(figuras[i].ColorTrazo);
-                figuras[i].Dibujar(pen,gr, i * 80, 50);
+                figuras[i].Dibujar(pen,gr, i * 80, 30);
             }
-
         }
     }
 }
