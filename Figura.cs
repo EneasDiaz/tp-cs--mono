@@ -5,6 +5,14 @@ namespace Figuras
 {
     public class Figura
     {
+        public Color ColorTrazo { get; set; }
+
+        // constructor por si no se le indica ningun color queda negro por default
+        public Figura()
+        {
+            ColorTrazo = Color.Black;
+        }
+
         public virtual void Dibujar(Pen pen, Graphics graphics, int x, int y)
         { 
             
