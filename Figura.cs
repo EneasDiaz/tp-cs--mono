@@ -70,4 +70,30 @@ namespace Figuras
             graphics.DrawEllipse(pen,x,y, radio, radio);
         }
     }
+
+    public class TrianguloIsosceles : Figura
+    {
+        protected int baseTriangulo;
+        protected int alto;
+
+
+        // Constructor necesito base y altura 
+        public TrianguloIsosceles(int baseTriangulo, int alto)
+        {
+            this.baseTriangulo = baseTriangulo;
+            this.alto = alto;
+        }
+
+        public override void Dibujar(Pen pen, Graphics graphics, int x, int y)
+        {
+            Point[] points = new Point[3]
+            {
+                new Point(x + baseTriangulo / 2, y),
+                new Point(x, y + alto),
+                new Point(x + baseTriangulo, y + alto)
+            };
+
+            graphics.DrawPolygon(pen, points);
+        }
+    }
 }
