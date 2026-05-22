@@ -26,9 +26,10 @@ namespace Figuras
         // Tipo de dato Color viene de la librería System.Drawing de .NET
         private Color ColorAleatorio()
         {// no se contempla el ultimo vavor 0-255 metodo propio de la clase random
-            int colorX = random.Next(0, 256);
-            int colorY = random.Next(0, 256);
-            int colorZ = random.Next(0, 256);
+        // limito a 180 los valores posibles de rojo verde y azul para no no llegar a valores altos que son los mas claros
+            int colorX = random.Next(0, 181);
+            int colorY = random.Next(0, 181);
+            int colorZ = random.Next(0, 181);
 
             return Color.FromArgb(colorX, colorY, colorZ);
         }
