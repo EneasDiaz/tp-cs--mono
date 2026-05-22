@@ -17,19 +17,19 @@ namespace Figuras
             InitializeComponent();
             figuras = new Figura[3] 
             {
-                new Circulo(60) { ColorTrazo = ColorAleatorio() },
-                new Rectangulo(30,50) { ColorTrazo = ColorAleatorio() },
-                new Cuadrado(45) { ColorTrazo = ColorAleatorio() },
+                new Circulo(40) { ColorTrazo = ColorAleatorio() },
+                new Rectangulo(80,55) { ColorTrazo = ColorAleatorio() },
+                new Cuadrado(100) { ColorTrazo = ColorAleatorio() },
             };
 
         }
         // Tipo de dato Color viene de la librería System.Drawing de .NET
         private Color ColorAleatorio()
         {// no se contempla el ultimo vavor 0-255 metodo propio de la clase random
-        // limito a 180 los valores posibles de rojo verde y azul para no no llegar a valores altos que son los mas claros
-            int colorX = random.Next(0, 181);
-            int colorY = random.Next(0, 181);
-            int colorZ = random.Next(0, 181);
+        // limito a 151 los valores posibles de rojo verde y azul para no no llegar a valores altos que son los mas claros
+            int colorX = random.Next(0, 151);
+            int colorY = random.Next(0, 151);
+            int colorZ = random.Next(0, 151);
 
             return Color.FromArgb(colorX, colorY, colorZ);
         }
@@ -40,7 +40,7 @@ namespace Figuras
             for (int i = 0; i < figuras.Length; i++)
             {
                 Pen pen = new Pen(figuras[i].ColorTrazo);
-                figuras[i].Dibujar(pen,gr,i * 100, 50);
+                figuras[i].Dibujar(pen,gr,20 + i * 130, 50);
             }
 
         }
